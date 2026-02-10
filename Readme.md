@@ -88,7 +88,7 @@ Notebook (if included): `notebooks/03_car_prices_mmr.ipynb`
 - Creates `price_diff` and `price_diff_pct`
 - Exports `car_prices_clean.csv` for Power BI
 
-## Repository Structure (recommended)
+## Repository Structure
 - data/
   - car_prices.csv
   - car_prices_clean.csv
@@ -101,3 +101,16 @@ Notebook (if included): `notebooks/03_car_prices_mmr.ipynb`
   - (optional) tooltip.png
   - (optional) drillthrough_details.png
 - README.md
+
+## Conclusion
+
+- Overall selling prices are close to MMR with a slight negative average deviation (Avg Diff% ≈ -0.77%), meaning cars tend to sell marginally below market estimate.
+
+- Deviation is heterogeneous by make: some brands show positive average Diff%, others remain close to zero.
+
+- Deviation varies across states, suggesting regional market conditions and auction dynamics impact final prices.
+
+- Car age shows a trend: older vehicles tend to have higher positive deviations (likely due to higher uncertainty/variance in pricing).
+
+- Monthly deviation fluctuates, with occasional extreme drops likely driven by small-volume segments or outliers (recommend using median and minimum N thresholds).
+
