@@ -29,6 +29,9 @@ Analyze how car selling prices deviate from MMR (market estimate) and build an i
 ### Avg Diff % over Time (Monthly)
 ![Avg Diff % over Time](images/avg_diff_over_time_monthly.png)
 
+### Make Details
+![Make Details](images/Make_details.png)
+
 ## Key KPIs (Overall)
 From the dashboard (All filters):
 - Cars: **~558K**
