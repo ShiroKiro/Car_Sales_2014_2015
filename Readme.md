@@ -71,8 +71,12 @@ File: `powerbi/Car_Sales.pbix`
 - Transmission
 
 ## Interactivity Features
-- **Report tooltips**: custom tooltip page with KPIs shown on hover (applied to selected visuals)
-- **Drill-through page**: details page for deeper analysis (e.g., by make/state), preserving selected filters
+- **Synced slicers**: all filters are placed on a dedicated **Filters** page and synced across report pages (so selections apply everywhere).
+- **Reset filters button**: one-click reset using a Power BI **Bookmark**.
+- **Report tooltips**: custom tooltip pages with KPIs shown on hover (applied to selected visuals).
+- **Top N parameter (5–30)**
+- **Premium threshold parameter (0–10%)**
+
 
 ## How to Run
 ### Power BI
@@ -80,6 +84,8 @@ File: `powerbi/Car_Sales.pbix`
 2) Refresh data:
    - If Power BI asks for a source path, point it to `data/car_prices_clean.csv`
 3) Use slicers (Sale Year / State / Make / Transmission) to explore segments
+4) Open the **Filters** page to set slicers (they are synced across all pages).
+5) Use the **Reset filters** button (bookmark) to return to default selections.
 
 ### Python (optional prep)
 Notebook (if included): `notebooks/03_car_prices_mmr.ipynb`
@@ -88,7 +94,7 @@ Notebook (if included): `notebooks/03_car_prices_mmr.ipynb`
 - Creates `price_diff` and `price_diff_pct`
 - Exports `car_prices_clean.csv` for Power BI
 
-## Repository Structure
+## Repository Structure (recommended)
 - data/
   - car_prices.csv
   - car_prices_clean.csv
@@ -101,16 +107,3 @@ Notebook (if included): `notebooks/03_car_prices_mmr.ipynb`
   - (optional) tooltip.png
   - (optional) drillthrough_details.png
 - README.md
-
-## Conclusion
-
-- Overall selling prices are close to MMR with a slight negative average deviation (Avg Diff% ≈ -0.77%), meaning cars tend to sell marginally below market estimate.
-
-- Deviation is heterogeneous by make: some brands show positive average Diff%, others remain close to zero.
-
-- Deviation varies across states, suggesting regional market conditions and auction dynamics impact final prices.
-
-- Car age shows a trend: older vehicles tend to have higher positive deviations (likely due to higher uncertainty/variance in pricing).
-
-- Monthly deviation fluctuates, with occasional extreme drops likely driven by small-volume segments or outliers (recommend using median and minimum N thresholds).
-
