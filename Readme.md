@@ -97,7 +97,7 @@ Notebook (if included): `notebooks/03_car_prices_mmr.ipynb`
 - Creates `price_diff` and `price_diff_pct`
 - Exports `car_prices_clean.csv` for Power BI
 
-## Repository Structure (recommended)
+## Repository Structure
 - data/
   - car_prices.csv
   - car_prices_clean.csv
@@ -106,7 +106,11 @@ Notebook (if included): `notebooks/03_car_prices_mmr.ipynb`
 - powerbi/
   - Car_Sales.pbix
 - images/
-  - car_sales_dashboard.png
-  - (optional) tooltip.png
-  - (optional) drillthrough_details.png
+  - kpis.png
+  - slicers.png
+  - avg_diff_by_make.png
+  - avg_diff_by_state.png
+  - avg_diff_over_time_monthly
+  - avg_diff_by_car_age
+  - Make_details.png
 - README.md
